@@ -69,7 +69,7 @@ while y_ori+D <= max_y+d
     while x_ori+D <= max_x
         index_surface_section = zeros(size_tri,1).*NaN;
         n = 1;
-
+%         修改了surface_section的搜索规则
         for i_0 = 1:size_tri
             if triangles(i_0,14)>=x_ori && triangles(i_0,16)+2>=y_ori && triangles(i_0,13)<=x_ori+D && triangles(i_0,15)<=y_ori+D+2
                 index_surface_section(n) = i_0;
@@ -160,13 +160,13 @@ successively added till their cumulative area does not exceed pi.*(0.5.*D).^2
     x_ori = triangles(tri_ori,cor_ori);
 end
 points_path(all(points_path==0,2),:)=[];
-i = 1;
+% i = 1;
 for i = 1:size(all_surface_section,1)
-    sum_q_1 = 0;
+%     sum_q_1 = 0;
     % 遍历当前pass的所有surface_section
     % b = 1;
     for b = 1:size(all_surface_section(i,:),2)
-        sum_q_1 = 0;
+%         sum_q_1 = 0;
         % 遍历当前surface_section的所有三角形
         for c = 1:size(all_surface_section{i,b},1)
             sum_q_1 = 0;

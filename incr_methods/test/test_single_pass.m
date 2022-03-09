@@ -71,7 +71,7 @@ index_surface_section = zeros(size_tri,1).*NaN;
 n = 1;
 
 for i_0 = 1:size_tri
-if triangles(i_0,14)>=x_ori && triangles(i_0,16)>=y_ori && triangles(i_0,13)<=x_ori+D && triangles(i_0,15)<=y_ori+D
+if triangles(i_0,14)>=x_ori && triangles(i_0,16)+2>=y_ori && triangles(i_0,13)<=x_ori+D && triangles(i_0,15)<=y_ori+D+2
     index_surface_section(n) = i_0;
     n = n+1;
 end

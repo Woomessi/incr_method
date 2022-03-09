@@ -85,6 +85,7 @@ surface_section = [surface_section,dis];
 surface_section = sortrows(surface_section,23);
 i = 1;
 sum_A = surface_section(i,22);
+pi*(0.5.*D).^2
 while sum_A <= pi*(0.5.*D).^2
     i = i+1;
     sum_A = sum_A + surface_section(i,22);
